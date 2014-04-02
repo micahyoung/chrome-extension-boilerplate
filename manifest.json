@@ -1,0 +1,22 @@
+{
+  "name": "EXTENSION_NAME",
+  "version": "0.0.0",
+  "manifest_version": 2,
+  "description": "EXTENSION_DESCRIPTION",
+  "browser_action": {
+    "default_title": "EXTENSION_TITLE"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus"
+  ]
+}
